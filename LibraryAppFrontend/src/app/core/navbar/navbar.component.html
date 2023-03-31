@@ -1,0 +1,12 @@
+<div class="navbar">
+
+<h2 class="header" [routerLink]="['/']"><i class="fa-solid fa-book-open-reader"> Dotnet Library</i></h2>
+
+<button *ngIf="!isAuthenticated" class="loginbutton" [routerLink]="['/login']">Login</button>
+<button *ngIf="!isAuthenticated" class="navbutton" [routerLink]="['/register']">Register</button>
+
+<button *ngIf="isAuthenticated" [routerLink]="['/books']" class="navbutton">Books</button>
+<button *ngIf="isAuthenticated" [routerLink]="['/account']" class="navbutton">Account</button>
+
+<button *ngIf="isAuthenticated" [routerLink]="['/about']" class="aboutbutton">About</button>
+</div>

@@ -1,0 +1,14 @@
+:root {
+    font-size: calc(0.6em + 0.5vw);
+    box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+button:hover {
+    cursor: pointer;
+}

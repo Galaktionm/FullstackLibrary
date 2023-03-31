@@ -1,0 +1,16 @@
+<div id="deleteFormGrid">
+
+<form [formGroup]="bookSearchForm" (ngSubmit)="deleteBook()">
+
+    <div class="formview">
+        <label for="book">Book: </label>
+        <div class="selectedbooks">
+          <button *ngIf="book">{{book}}</button>
+        </div>
+        <input type="text" formControlName="book" id="book">
+    </div>
+
+   <button type="submit">Delete</button>
+</form>
+
+</div>

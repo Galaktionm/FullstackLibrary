@@ -1,0 +1,20 @@
+<h2>Welcome, {{user.username}}</h2>
+
+<p>Currently logged in as: {{user.email}}</p>
+
+<div *ngIf="user.checkouts">
+    <p>Here are your checkouts</p>
+    <ul>
+        <li *ngFor="let checkout of user.checkouts">
+            <p>Checkout date: {{checkout.checkoutDate}}</p>
+            <p>Return date: {{checkout.returnDate}}</p>
+            <ul>
+                <li *ngFor="let book of checkout.books">{{book.title}}</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<button *ngIf="isAdmin" routerLink="/adminpanel">Admin Panel</button>
+
+

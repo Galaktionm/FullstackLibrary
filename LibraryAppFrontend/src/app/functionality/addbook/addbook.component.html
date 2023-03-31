@@ -1,0 +1,43 @@
+<div class="addbookgrid">
+
+    <div class="addbookforminfo">
+        <p>Add a book to the library's database. Users will be able to view it's information, and add reviews.
+            <br><br>
+        Adding an author does not have to be a hassle! Just search for any author by name, 
+            select from the search results on the right, and it's over!
+    </div>
+
+<div class="addbookformdiv" id="addbookformdiv">
+<form [formGroup]="addBookForm" class="addbookform">
+
+  <div class="formview">
+    <label for="title">Title:</label>
+    <input type="text" formControlName="title" id="title"/>
+  </div>
+
+  <div class="formview">
+    <label for="description">Description:</label>
+    <textarea type="text" formControlName="description" id="description"></textarea>
+  </div>
+
+  <div class="formview">
+    <label for="authors">Authors:</label>
+    <div class="selectedAuthors">
+        <button *ngFor="let authorname of finalAuthors">{{authorname}}</button>
+    </div>
+    <input type="text" formControlName="authors" id="authors">
+  </div>
+
+  <div class="formview">
+    <label for="available">Available: </label>
+    <input type="number" formControlName="available" id="available">
+  </div>
+  <div class="formview">
+    <button type="submit" (click)="addBook()" class="addButton">Add</button>
+  </div>
+</form>
+
+</div>
+
+
+</div>

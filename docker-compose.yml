@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+    libraryapi:
+       build:
+         context: LibraryAPI
+       ports:
+       - 7800:80
+        
+    postgresql:
+        image: postgres
+        environment:
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASSWORD=password
+

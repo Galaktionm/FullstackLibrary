@@ -1,0 +1,25 @@
+.bookdashboardgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.dashboardnavigation > button {
+    display: block;
+    margin: 0.5em;
+    color: white;
+    background-color: rgb(10, 5, 79);
+    border: none !important;
+    padding: 1em;
+}
+
+.dashboardnavigation {
+    display: flex;
+    justify-content: center;
+}
+
+.bookpanel {
+    border-radius: 0.4em;
+    background-color: rgb(110, 20, 220);
+    margin: 0.3em;
+    padding: 0.5em;
+}

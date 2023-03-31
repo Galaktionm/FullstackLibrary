@@ -1,0 +1,85 @@
+
+.addbookgrid {
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    margin: 0.5em 1.5em;
+    padding: 0;
+}
+
+.addbookforminfo {
+    display: flex;
+    background-color: rgb(10, 5, 79);
+    padding: 0;
+    color: white;
+    font-size: 1.5em;
+    font-weight: 600;
+    padding: 0.4em;
+}
+
+
+.addbookformdiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.addbookform {
+    margin: 0.2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.formview {
+    margin: 1em;
+}
+
+.formview > label, input, textarea {
+    display: block;
+    font-size: 2.5em;
+}
+
+.selectedAuthors {
+    display: flex;
+    flex-direction: row;
+    margin: 0.3em 0;
+}
+
+.selectedAuthors > button {
+    border: none !important;
+    border-radius: 0.5em;
+    background-color: rgb(110, 20, 220);
+    color: white;
+    font-size: 1.5em;
+    padding: 0.4em;
+}
+
+.selectedAuthors > button + button {
+    margin-left: 0.2em;
+}
+
+#authorsdiv {
+    border: solid rgb(110, 20, 220);
+    display: flex;
+    flex-direction: column;
+}
+
+#authorsdiv > button {
+    display: block;
+    max-height: 5em;
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: rgb(110, 20, 220);
+    color: white;
+    font-weight: 800;
+    font-size: 2em;
+    margin: 0.5em;
+}
+
+.addButton {
+    border: none !important;
+    background-color: rgb(10, 5, 79);
+    size: 100%;
+    padding: 1em 2em;
+    color: white;
+}

@@ -1,0 +1,34 @@
+
+.navbar {
+    display: flex;
+    background-color: rgb(10, 5, 79);
+}
+
+.header {
+    color: yellow;
+    margin-left: 1em;
+}
+
+.header:hover {
+    cursor: pointer;
+}
+
+.navbutton {
+    display: block;
+    color: yellow;
+    border: none !important;
+    background-color: transparent;
+    margin: 0.5em;
+    font-size: 1.5em;
+}
+
+.loginbutton, .aboutbutton {
+    display: block;
+    border: none !important;
+    background-color: transparent;
+    color: yellow;
+    margin-left: auto;
+    margin-right: 1em;
+    font-size: 1.5em;
+}
+

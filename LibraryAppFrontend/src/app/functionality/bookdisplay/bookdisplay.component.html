@@ -1,0 +1,33 @@
+<div class="bookdisplay">
+    
+    <div class="maininfo">
+
+        <div class="imagediv">
+            <img *ngIf="imagePath" [src]="hostPath+imagePath">
+        </div>
+
+     <div class="information">
+      <h2>{{title}}</h2>
+      <p>{{description}}</p>
+    </div>   
+
+   </div>
+
+<div class="detailsinfo">
+    <div *ngIf="authors.length>1">
+        <p>Authors:</p>
+        <ul>
+            <li *ngFor="let author of authors">{{author.name}}</li>
+        </ul>
+    </div>
+
+    <div *ngIf="authors.length==1">
+        <p>Author:</p>
+        <p>{{authors[0].name}}</p>
+    </div>
+
+<div class="detailsbuttondiv">
+    <button [routerLink]="['/book', bookId]" class="detailsbutton">Details</button>
+</div>
+   </div>
+</div>

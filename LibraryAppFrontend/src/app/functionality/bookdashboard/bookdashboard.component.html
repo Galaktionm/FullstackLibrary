@@ -1,0 +1,21 @@
+<div class="bookdashboard">
+
+<div class="bookdashboardgrid">
+
+    <div *ngFor="let book of result.data" class="bookpanel">
+        <app-bookdisplay
+        [imagePath]="book.imagePath"
+        [bookId]="book.bookId"
+        [title]="book.title"
+        [description]="book.description"
+        [authors]="book.author"
+        [isAdmin]="isAdmin"></app-bookdisplay>
+    </div>
+</div>
+
+<div class="dashboardnavigation">
+<button (click)="moveToPreviousPage()">Previous</button>
+<button (click)="moveToNextPage()">Next</button>
+</div>
+
+</div>

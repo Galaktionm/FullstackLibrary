@@ -1,0 +1,32 @@
+<div class="checkoutformgrid" id="checkoutformgrid">
+
+<form [formGroup]="checkoutForm" class="checkoutform" (ngSubmit)="sendCheckoutRequest()">
+
+  <div class="formview">
+    <label for="user">User: </label>
+    <button class="selecteduser" *ngIf="user">{{user.email}}</button>
+    <input type="text" formControlName="user" id="user">
+  </div>
+
+  <div class="formview">
+    <label for="book">Book: </label>
+    <div class="selectedbooks">
+      <button *ngFor="let book of books">{{book}}</button>
+    </div>
+    <input type="text" formControlName="book" id="book">
+  </div>
+
+  <div class="formview">
+    <label for="returnDate">Return date: </label>
+    <input type="text" formControlName="returnDate" id="returnDate">
+  </div>
+
+  <div class="formview">
+    <button type="submit">Submit</button>
+  </div>
+
+</form>
+
+</div>
+
+

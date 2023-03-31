@@ -1,0 +1,55 @@
+<div class="bookdetailsgrid">
+
+   <div class="bookvisual" id="bookvisual">
+      <img *ngIf="this.imagePath" [src]="this.imagePath">
+      
+      <div class="imagebuttondiv">
+         <p>Update image: </p>
+         <input type="file" (change)="addImage($event)" value="Update image" class="imagebutton">
+      </div>
+   </div>
+
+   <div class="bookinfo">
+      <h3>{{book.title}}</h3>
+      <div>
+        <p>{{book.description}}</p>
+      </div>
+      <p>Author: {{book.author[0].name}}</p>   
+   </div>
+</div>
+
+
+<div class="bookreviewsgrid" (submit)="addReview()">
+
+   <form [formGroup]="addReviewForm">
+
+      <label for="review">Review</label>
+      <textarea formControlName="review" id="review"></textarea>
+
+   <div class="radiobuttonsdiv">
+      <p>Rating: </p>
+      <input type="radio" formControlName="rating" id="1" value=1>
+      <label for="1">1</label>
+      <input type="radio" formControlName="rating" id="2" value=2>
+      <label for="2">2</label>
+      <input type="radio" formControlName="rating" id="3" value=3>
+      <label for="3">3</label>
+      <input type="radio" formControlName="rating" id="4" value=4>
+      <label for="4">4</label>
+      <input type="radio" formControlName="rating" id="5" value=5>
+      <label for="5">5</label>
+   </div>
+
+   <button type="submit">Add</button>
+
+   </form>
+
+    <div *ngFor="let review of book.reviews">
+        <p>User: {{review.user}}</p>
+        <p>Rating: {{review.rating}}</p>
+        <p *ngIf="review.review">Review: {{review.review}}</p>
+    </div>
+
+</div>
+
+

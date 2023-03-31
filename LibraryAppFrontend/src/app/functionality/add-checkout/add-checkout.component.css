@@ -1,0 +1,87 @@
+
+.checkoutformgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.checkoutform {
+    margin: 0.2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.formview {
+    margin: 1em;
+}
+
+.formview > label, input {
+    display: block;
+    font-size: 2.5em;
+}
+
+#usersdiv {
+    display: flex;
+    flex-direction: column;
+    border: solid;
+    border-color: rgb(110, 20, 220);;
+}
+
+#usersdiv > button {
+    display: block;
+    max-height: 3em;
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: rgb(110, 20, 220);
+    color: white;
+    font-weight: 800;
+    font-size: 2em;
+    margin: 0.5em;
+}
+
+.selecteduser {
+    display: block;
+    border: none !important;
+    border-radius: 0.5em;
+    background-color: rgb(110, 20, 220);
+    color: white;
+    font-size: 1.2em;
+    padding: 0.3em;
+}
+
+
+#booksdiv {
+    display: flex;
+    flex-direction: column;
+    border: solid;
+    border-color: rgb(233, 80, 10);;
+}
+
+#booksdiv > button {
+    display: block;
+    max-height: 3em;
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: rgb(233, 80, 10);;
+    color: white;
+    font-weight: 800;
+    font-size: 2em;
+    margin: 0.5em;
+}
+
+.selectedbooks {
+    display: flex;
+    flex-direction: row;
+    margin: 0.3em;
+}
+
+.selectedbooks > button {
+    border: none !important;
+    border-radius: 0.5em;
+    background-color: rgb(233, 80, 10);;
+    color: white;
+    font-size: 1.2em;
+    padding: 0.3em;
+}
+

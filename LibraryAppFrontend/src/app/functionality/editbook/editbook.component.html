@@ -1,0 +1,23 @@
+<div>
+
+    <div>
+       <h3>{{book.title}}</h3>
+       <p>{{book.description}}</p>
+       <p>Available: {{book.available}}</p>
+       <p>Author: {{book.author[0].name}}</p>
+    </div>
+
+    <form [formGroup]="editForm" (ngSubmit)="sendUpdateRequest()">
+        <label for="title">Enter a new title: </label>
+        <input type="text" id="title" formControlName="title"/>
+
+        <label for="description">Update description: </label>
+        <textarea type="text" id="description" formControlName="description"></textarea>
+
+        <label for="available">Set available units:</label>
+        <input type="number" id="available" formControlName="available"/>
+
+        <button type="submit">Update</button>
+
+    </form>
+ </div>

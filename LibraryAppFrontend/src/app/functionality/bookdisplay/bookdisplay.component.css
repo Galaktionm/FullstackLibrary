@@ -1,0 +1,45 @@
+.bookdisplay {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.buttondiv {
+    display: flex;
+    margin: 0.4em;
+}
+
+.detailsinfo {
+    display: flex;
+}
+
+.detailsbuttondiv {
+    margin-left: auto;
+    display: flex;
+    padding: 1em;
+}
+
+.detailsbuttondiv > button {
+    color: white;
+    font-size: 1.2em;
+    background-color: red;
+    border: none;
+}
+
+.maininfo {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+}
+
+.imagediv, .information {
+    margin: 0.3em;
+}
+
+.imagediv > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    overflow: hidden;
+}
+
